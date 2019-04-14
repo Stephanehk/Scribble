@@ -121,8 +121,13 @@ main {
     color: #525f7f;
 }
 
-input[type="file"] {
+/* input[type="file"] {
     display: none;
+} */
+
+.bar {
+    height: 18px;
+    background: green;
 }
 
 .custom-file-upload {

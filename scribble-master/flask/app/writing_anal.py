@@ -123,12 +123,14 @@ def get_countour_l(img, min_area):
 def create_object(image, bounds, letters, time):
     letter_objects = []
     image1 = image.copy()
+    image = cv2.Canny(image, 100, 200)
+    image = cv2.cvtColor(image, cv2.COLOR_GRAY2BGR)
     for bound,letter in zip(bounds, letters):
         x1, y1 = bound.vertices[0].x, bound.vertices[0].y,
         x2,y2 = bound.vertices[1].x, bound.vertices[1].y
         x3,y3 = bound.vertices[2].x, bound.vertices[2].y
         x4,y4 = bound.vertices[3].x, bound.vertices[3].y,
-        cv2.rectangle(image,(x4,y4),(x2,y2),(0,255,0),1)
+        cv2.rectangle(image,(x4,y4),(x2,y2),(255,206,98),2)
         width = x3 - x4
         height = y3- y2
         offset = 3
@@ -142,7 +144,8 @@ def create_object(image, bounds, letters, time):
         letter_object.x = x4
         letter_object.y = y4
         letter_objects.append(letter_object)
-    return letter_objects
+    image = cv2.resize(image, (350, 350))
+    return letter_objects, image
 
 def distance_between_letters (letter_objects_b):
     distances = []
@@ -298,16 +301,21 @@ def creat_anal_objects (structural_differences, area_differences, same_letters):
         letter_anals.append(letter_anal)
     return letter_anals
 
+def fancy_image (image_with_rects_b, image_with_rects_a):
+    cv2.imshow("img_b", image_with_rects_b)
+    cv2.imshow("img_a", image_with_rects_a)
+    cv2.waitKey(0)
+
 def main(before, after):
     img_b = cv2.imread(before,0)
     bounding_boxes_b, letters_b = run_ocr.detect_document(before)
-    letter_objects_b = create_object(img_b, bounding_boxes_b, letters_b, "b")
+    letter_objects_b, image_with_rects_b= create_object(img_b, bounding_boxes_b, letters_b, "b")
 
     #anal_b = anal_word_shape(letter_objects_b)
 
     img_a = cv2.imread(after,0)
     bounding_boxes_a, letters_a = run_ocr.detect_document(after)
-    letter_objects_a = create_object(img_a, bounding_boxes_a, letters_a, "a")
+    letter_objects_a, image_with_rects_a = create_object(img_a, bounding_boxes_a, letters_a, "a")
 
     same_letters = find_same_letters (letter_objects_b, letter_objects_a)
 
@@ -322,7 +330,7 @@ def main(before, after):
 
     letter_anals = creat_anal_objects(structural_differences, area_differences, same_letters)
     score = heuristic (letter_anals,line_shift_difference, area_differences, change_in_dist)
-
+    #fancy_image (image_with_rects_b, image_with_rects_a)
 
 
     # print ("Avg structural differences")
@@ -337,7 +345,7 @@ def main(before, after):
         message =  ("There are signs of dimensia in the handwriting")
     else:
         message = ("There are no signs of dimensia in the handwriting")
-    return score, message
+    return score, message, image_with_rects_b, image_with_rects_a
 
 #main("/Users/2020shatgiskessell/Desktop/HandAnal/4_b.jpg", "/Users/2020shatgiskessell/Desktop/HandAnal/4_a.jpg")
 

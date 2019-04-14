@@ -17,8 +17,20 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
+      <style media="screen">
+      .btn-file{
+        color: white !important;
+        margin-bottom: 0px !important;
+        cursor: pointer;
+      }
+
+      </style>
+
+
     <!-- Extra -->
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
 
 
     <title>Scribble | Handwrighting Analysis</title>
@@ -56,9 +68,11 @@
                 <div class="row">
                     <!--Main Content-->
                     <div class="col-md title" data-aos="fade-up">
-                        <h1 class="title-statement">Early Neurological Disease Detection<br><b>Ensuring the health of those who matter most</b></h1>
+                        <h1 class="title-statement">Early Neurological Disease Detection<br><b>Ensuring the health of
+                                those who matter most</b></h1>
                         <p class="title-paragraph">Using the latest devlopments in computer vision
-                            technology, we are able to<br>analyze handwriting samples and detect early signs of Alzheimer's and Parkinsons Disease</p>
+                            technology, we are able to<br>analyze handwriting samples and detect early signs of
+                            Alzheimer's and Parkinsons Disease</p>
                         <a href="#features">
                             <button class="btn bg-primary btn-lg">Explore</button>
                         </a>
@@ -77,19 +91,22 @@
                         <i class="fas fa-bolt fa-2x mb-4" style="color:#FFB4EC"></i>
                         <h4 class="mb-3" style="color: #32325d"><b>In The Home</b></h4>
                         <p style="color: #525f7f">Scribble allows you to keep track of your loved ones well being.
-                            Simply snap a couple photos of an old christmas card, letter, or any other written document. Scribble makes
-                          sure there are no suprises in your loved ones health.</p>
+                            Simply snap a couple photos of an old christmas card, letter, or any other written document.
+                            Scribble makes
+                            sure there are no suprises in your loved ones health.</p>
                     </div>
                     <div class="col-md" data-aos="fade-up" data-aos-delay="100">
                         <i class="fab fa-accessible-icon fa-2x mb-4" style="color:#FFE164"></i>
                         <h4 class="mb-3" style="color: #32325d"><b>In Finance</b></h4>
                         <p style="color: #525f7f">Make sure that your clients are able to make
-                          important financial decisions. Scribble can help with retiree wealth management using images of signed checks, documents, etc.</p>
+                            important financial decisions. Scribble can help with retiree wealth management using images
+                            of signed checks, documents, etc.</p>
                     </div>
                     <div class="col-md" data-aos="fade-up" data-aos-delay="200">
                         <i class="fas fa-air-freshener fa-2x mb-4" style="color:#97A4FF"></i>
                         <h4 class="mb-3" style="color: #32325d"><b>In the Public Sector</b></h4>
-                        <p style="color: #525f7f">The U.S Government spends upwards of $175 billion on Alzheimer's disease related costs every year.
+                        <p style="color: #525f7f">The U.S Government spends upwards of $175 billion on Alzheimer's
+                            disease related costs every year.
                             Scribble can help alleviate this cost by allowing for early detection like never before.</p>
                     </div>
                 </div>
@@ -98,28 +115,40 @@
         <section id="try" data-aos="fade-up">
             <div class="text-center">
                 <h1 class="try-title">Try It Now</h1>
-                <p class="text-p">Simply upload a before and after photo below. With just a couple clicks, Scribble can give you an accurate prediction!</p>
-                    <form action="/upload" method="post" enctype="multipart/form-data" >
-                        <label class="btn btn-default btn-file">
-                            Browse <input <input type="file" name="image" style="display: none;">
-                        </label>
-                        <input type="submit" value="Upload before image" class="btn btn-primary">
-                    </form>
+                <p class="text-p">Simply upload a before and after photo below. With just a couple clicks, Scribble can
+                    give you an accurate prediction!</p>
+                <div class="row">
+                    <div class="col-md">
+                        <form action="/upload#try" method="post" enctype="multipart/form-data">
+                            <label class="btn bg-success btn-file">
+                                <!-- ERROR -->
+                                Browse <input type="file" name="image" style="display: none;">
+                            </label>
+                            <input type="submit" value="Upload a before image" class="btn btn-primary">
+                        </form>
+                        <img class="mt-5 mb-3" src="{{ image_b }}" >
+                    </div>
+                    <div class="col-md">
 
-                    <form action="/upload" method="post" enctype="multipart/form-data" >
-                        <label class="btn btn-default btn-file">
-                            Browse <input <input type="file" name="image" style="display: none;">
-                        </label>
-                        <input type="submit" value="Upload after image" class="btn btn-primary">
-                    </form>
-                    <br></br>
+                        <form action="/upload#try" method="post" enctype="multipart/form-data">
+                            <label class="btn bg-success btn-file">
+                                <!-- ERROR -->
+                                Browse <input type="file" name="image" style="display: none;">
+                            </label>
+                            <input type="submit" value="Upload an after image" class="btn btn-primary">
+                        </form>
+                        <img class="mt-5" src="{{ image_a }}">
+                    </div>
 
-                    <label class="results_title">
-                        Result:
-                    </label>
-                    <p class="results_value">
-                      {{output_message}}
-                    </p>
+                </div>
+                <br></br>
+
+                <h2 class="results_title" style="color:#32325d">
+                    Result:
+                </h2>
+                <h3 class="results_value" style="color:#525f7f">
+                    {{output_message}}
+                </h3>
             </div>
         </section>
     </main>
@@ -135,10 +164,6 @@
 
     </footer>
     <!-- Footer -->
-
-
-
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -166,6 +191,7 @@
             });
         });
     </script>
+
 </body>
 
 </html>
