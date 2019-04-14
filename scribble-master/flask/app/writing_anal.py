@@ -334,10 +334,10 @@ def main(before, after):
 
     print ("score: " + str(score))
     if score < 10:
-        print ("There are signs of a neurological condition in the handwriting")
+        message =  ("There are signs of dimensia in the handwriting")
     else:
-        print ("There are no signs of a neurological condition in the handwriting")
-    return score
+        message = ("There are no signs of dimensia in the handwriting")
+    return score, message
 
 #main("/Users/2020shatgiskessell/Desktop/HandAnal/4_b.jpg", "/Users/2020shatgiskessell/Desktop/HandAnal/4_a.jpg")
 

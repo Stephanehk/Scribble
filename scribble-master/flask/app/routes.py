@@ -24,10 +24,12 @@ def upload_file():
     file_names.append(filename)
     if len(file_names) == 2:
         print ("calculating...")
-        score = writing_anal.main(file_names[0], file_names[1])
+        score, message = writing_anal.main(file_names[0], file_names[1])
         print (score)
-        #os.remove("/Users/2020shatgiskessell/Downloads/scribble-master/flask/app/"+file_names[0])
-        #os.remove("/Users/2020shatgiskessell/Downloads/scribble-master/flask/app/"+file_names[1])
+        os.remove(file_names[0])
+        os.remove(file_names[1])
+        return render_template('index.html', invalidImage=False, output_message=message)
+
 
     # invalidImage = False
     # if invalidImage:
