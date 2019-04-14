@@ -1,0 +1,133 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+/* Navbar */
+.navbar {
+    padding: 10px 40px 0px 40px;
+    transition: background-color 200ms linear;
+
+}
+
+.navbar-light .navbar-toggler {
+    border-width: 0px !important;
+    outline: none;
+}
+
+.navbar-nav>li {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.nav-link.text-scrolled {
+    color: #4AB3FF !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: white;
+    font-weight: 600;
+}
+
+.nav-item .btn {
+    font-weight: 600;
+    color: #4AB3FF;
+
+}
+
+.navbar.scrolled {
+    background-color: #fff !important;
+    transition: background-color 200ms linear;
+}
+
+.get-started.button-scrolled {
+    background-color: #62CEFF;
+    transition: background-color 200ms;
+    color: white;
+    border-width: 0px;
+}
+
+
+/* Main */
+
+main {
+    margin: 10px 40px 0px 40px;
+}
+
+/* Hero */
+.hero {
+    min-height: 100vh;
+}
+
+.top-graphic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.title-statement {
+    margin-top: 120px;
+    font-size: 50px;
+    color: #32325d;
+}
+
+.graphic {
+    margin-top: 30px;
+}
+
+.title-paragraph {
+    margin-top: 30px;
+    letter-spacing: 1px;
+    font-weight: lighter;
+    line-height: 25px;
+    color: #525f7f
+}
+
+.title .btn {
+    margin-top: 30px;
+    letter-spacing: 1.5px;
+    width: 150px;
+    background-color: #62CEFF !important;
+    color: white
+}
+
+.title .btn:hover {
+    background-color: rgb(69, 183, 236) !important;
+    color: white;
+}
+
+.title .btn:active {
+    background-color: rgb(54, 118, 148) !important;
+    color: white;
+}
+
+/* Try it now */
+
+.try {
+    margin-top: 100px;
+}
+
+.try-title {
+    margin-top: 100px;
+    color: #32325d;
+}
+
+.text-p {
+    margin-top: 20px;
+    color: #525f7f;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}

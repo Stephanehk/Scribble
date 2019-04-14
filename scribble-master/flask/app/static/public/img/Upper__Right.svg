@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="881px" height="536px" viewBox="0 0 881 536" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54 (76480) - https://sketchapp.com -->
+    <title>Upper__Right</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="0%" y1="31.4651921%" x2="100%" y2="68.5348079%" id="linearGradient-1">
+            <stop stop-color="#ABDCFF" offset="0%"></stop>
+            <stop stop-color="#0396FF" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="31.4651921%" x2="100%" y2="68.5348079%" id="linearGradient-2">
+            <stop stop-color="#ABDCFF" offset="0%"></stop>
+            <stop stop-color="#0396FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01_Landing" transform="translate(-485.000000, 0.000000)">
+            <g id="Upper__Right" transform="translate(485.000000, 0.000000)">
+                <path d="M881,0 L881,536 C848.515471,517.928438 803.863741,486.297933 727.064874,466.022779 C559.106891,421.67681 491.417609,498.676004 408.65112,439.664024 C322.942994,378.553888 370.726144,278.295729 271.585597,209.815685 C206.943388,165.153412 166.435254,193.84228 98.6721679,143.391624 C54.6003305,110.580247 10.2649055,52.6858784 0.649231859,0 L881,0 Z" id="Outer" fill="url(#linearGradient-1)" opacity="0.5"></path>
+                <path d="M881,0 L881,508.37 C850.19,491.23 807.84,461.23 735,442 C575.7,399.94 511.5,472.97 433,417 C351.71,359.04 397.03,263.95 303,199 C241.69,156.64 203.27,183.85 139,136 C97.2,104.88 55.15,49.97 46.03,0 L881,0 Z" id="Inner" fill="url(#linearGradient-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

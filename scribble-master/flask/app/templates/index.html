@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../static/public/css/main.css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../static/public/assets/bootstrap/css/bootstrap.min.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Extra -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+    <title>Scribble | Handwrighting Analysis</title>
+
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-transparent">
+        <a class="navbar-brand" href="#">
+            <img src="../static/public/img/nameLogo.png" height="30" alt="logo">
+        </a>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Learn More</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#try">
+                        <button type="button" class="btn btn-light get-started">Get Started</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="fas fa-bars"></span>
+        </button>
+    </nav>
+
+    <main>
+        <!-- Upper Right Graphic -->
+        <img class="top-graphic" src="../static/public/img/Upper__Right.svg" alt="top-graphic">
+        <section class="hero">
+            <div class="container">
+                <div class="row">
+                    <!--Main Content-->
+                    <div class="col-md title" data-aos="fade-up">
+                        <h1 class="title-statement">Early Neurological Disease Detection<br><b>Ensuring the health of those who matter most</b></h1>
+                        <p class="title-paragraph">Using the latest devlopments in computer vision
+                            technology, we are able to<br>analyze handwriting samples and detect early signs of Alzheimer's and Parkinsons Disease</p>
+                        <a href="#features">
+                            <button class="btn bg-primary btn-lg">Explore</button>
+                        </a>
+                    </div>
+                    <!-- Graphic -->
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                        <img class="graphic" src="../static/public/img/graphic.svg" alt="graphic">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="features" id="features">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md" data-aos="fade-up">
+                        <i class="fas fa-bolt fa-2x mb-4" style="color:#FFB4EC"></i>
+                        <h4 class="mb-3" style="color: #32325d"><b>In The Home</b></h4>
+                        <p style="color: #525f7f">Scribble allows you to keep track of your loved ones well being.
+                            Simply snap a couple photos of an old christmas card, letter, or any other written document. Scribble makes
+                          sure there are no suprises in your loved ones health.</p>
+                    </div>
+                    <div class="col-md" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fab fa-accessible-icon fa-2x mb-4" style="color:#FFE164"></i>
+                        <h4 class="mb-3" style="color: #32325d"><b>In Finance</b></h4>
+                        <p style="color: #525f7f">Make sure that your clients are able to make
+                          important financial decisions. Scribble can help with retiree wealth management using images of signed checks, documents, etc.</p>
+                    </div>
+                    <div class="col-md" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-air-freshener fa-2x mb-4" style="color:#97A4FF"></i>
+                        <h4 class="mb-3" style="color: #32325d"><b>In the Public Sector</b></h4>
+                        <p style="color: #525f7f">The U.S Government spends upwards of $175 billion on Alzheimer's disease related costs every year.
+                            Scribble can help alleviate this cost by allowing for early detection like never before.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="try" data-aos="fade-up">
+            <div class="text-center">
+                <h1 class="try-title">Try It Now</h1>
+                <p class="text-p">Simply upload a before and after photo below. With just a couple clicks, Scribble can give you an accurate prediction!</p>
+                    <form action="/upload" method="post" enctype="multipart/form-data" >
+                        <label class="btn btn-default btn-file">
+                            Browse <input <input type="file" name="image" style="display: none;">
+                        </label>
+                        <input type="submit" value="Upload before image" class="btn btn-primary">
+                    </form>
+
+                    <form action="/upload" method="post" enctype="multipart/form-data" >
+                        <label class="btn btn-default btn-file">
+                            Browse <input <input type="file" name="image" style="display: none;">
+                        </label>
+                        <input type="submit" value="Upload after image" class="btn btn-primary">
+                    </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer font-small blue mt-5">
+
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2019 Copyright:
+            <a href="#"> Scribble</a>
+        </div>
+        <!-- Copyright -->
+
+    </footer>
+    <!-- Footer -->
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"> </script>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        $(function () {
+            $(document).scroll(function () {
+                var $nav = $(".navbar");
+                var $text = $(".nav-link")
+                var $button = $(".get-started")
+                $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                $text.toggleClass('text-scrolled', $(this).scrollTop() > $nav.height());
+                $button.toggleClass('button-scrolled', $(this).scrollTop() > $nav.height());
+            });
+        });
+    </script>
+</body>
+
+</html>
